@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat app</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<h1>Admin Room</h1>
+<div id="in-room">
+    <h3>In This Room</h3>
+    <ul id="participants"></ul>
+</div>
+
+<div id="fun-chat">
+    <div id="chat-window">
+        <div id="output">
+        </div>
+        <div id="feedback">
+
+        </div>
+    </div>
+
+    <div id="collect-handle">
+        <input id="handle" type="text" placeholder="Handle" />
+        <input id="message" type="text" placeholder="Message" />
+        <button id="send-handle">Send</button>
+    </div>
+
+    <div id="buzzer">
+        <button id="buzz">BUZZ!</button>
+    </div>
+
+    <br><br>
+
+    <h2>This would be admin only</h2>
+
+    <button id="clear">clear</button>
+    <button id="disable">disable</button>
+    <button id="enable">enable</button>
+</div>
+
+<script src="/chat.js"></script>
+
+</body>
+</html>
