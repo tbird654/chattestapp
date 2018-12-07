@@ -1,6 +1,3 @@
-/**
- * Created by dustin on 11/28/18.
- */
 //This is the server js
 
 var express = require('express');
@@ -30,18 +27,18 @@ io.on('connection', function(socket){
     socket.on('buzz', function(data){
         io.sockets.emit('buzz', data);
     });
-
-    socket.on('chatClear', function(data){
-        io.sockets.emit('chatClear', data);
-    });
-
-    socket.on('chatEnable', function(data){
-        io.sockets.emit('chatEnable', data);
-    });
-
-    socket.on('chatDisable', function(data){
-        io.sockets.emit('chatDisable', data);
-    });
+    //
+    // socket.on('chatClear', function(data){
+    //     io.sockets.emit('chatClear', data);
+    // });
+    //
+    // socket.on('chatEnable', function(data){
+    //     io.sockets.emit('chatEnable', data);
+    // });
+    //
+    // socket.on('chatDisable', function(data){
+    //     io.sockets.emit('chatDisable', data);
+    // });
 
     socket.on('typing', function(data){
         socket.broadcast.emit('typing', data);

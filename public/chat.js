@@ -36,17 +36,17 @@ buzz.addEventListener('click', function (){
     });
 });
 
-clear.addEventListener('click', function (){
-    socket.emit('chatClear');
-});
-
-disable.addEventListener('click', function (){
-    socket.emit('chatDisable');
-});
-
-enable.addEventListener('click', function (){
-    socket.emit('chatEnable');
-});
+// clear.addEventListener('click', function (){
+//     socket.emit('chatClear');
+// });
+//
+// disable.addEventListener('click', function (){
+//     socket.emit('chatDisable');
+// });
+//
+// enable.addEventListener('click', function (){
+//     socket.emit('chatEnable');
+// });
 
 
 message.addEventListener('keypress', function (){
@@ -65,19 +65,19 @@ socket.on('buzz', function(data){
 
 });
 
-socket.on('chatClear', function(data){
-    output.innerHTML = '';
-});
-
-socket.on('chatEnable', function(data){
-    send.style.display = 'inline';
-    console.log('disable send');
-});
-
-socket.on('chatDisable', function(data){
-    send.style.display = 'none';
-    console.log('disable send');
-});
+// socket.on('chatClear', function(data){
+//     output.innerHTML = '';
+// });
+//
+// socket.on('chatEnable', function(data){
+//     send.style.display = 'inline';
+//     console.log('disable send');
+// });
+//
+// socket.on('chatDisable', function(data){
+//     send.style.display = 'none';
+//     console.log('disable send');
+// });
 
 //broadcast feedback
 socket.on('typing', function(data){
