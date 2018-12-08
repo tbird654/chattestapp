@@ -26,14 +26,15 @@ var io = socket(server);
 io.on('connection', function(socket){
    console.log('made socket connection', socket.id);
 
+
    //listen for socket chat from front
    socket.on('chat', function(data){
        io.sockets.emit('chat', data);
    });
 
-    socket.on('buzz', function(data){
-        io.sockets.emit('buzz', data);
-    });
+    // socket.on('buzz', function(data){
+    //     io.sockets.emit('buzz', data);
+    // });
     //
     // socket.on('chatClear', function(data){
     //     io.sockets.emit('chatClear', data);
@@ -50,4 +51,15 @@ io.on('connection', function(socket){
     socket.on('typing', function(data){
         socket.broadcast.emit('typing', data);
     });
+
+    // socket.on('disconnect', function () {
+    //     console.log('user disconnected');
+    // });
+
 });
+
+io.on('disconnection', function(socket) {
+    console.log('socket disconnected', socket.id);
+});
+
+
