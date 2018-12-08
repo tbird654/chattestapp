@@ -4,7 +4,7 @@
 
 //Make Connection
 
-var socket = io.connect('https://ddchatapp.herokuapp.com/');
+var socket = io.connect();
 
 // Query DOM
 var message = document.getElementById('message'),
